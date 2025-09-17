@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // Your existing HTTP backend configuration can stay here
+    {
+      "name": "Debug HTTP Backend (TS)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/apps/http-backend/src/index.ts",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "cwd": "${workspaceFolder}/apps/http-backend",
+      "runtimeExecutable": "/home/ash/.nvm/versions/node/v22.18.0/bin/node"
+    },
+    // Add this new configuration for your WebSocket backend
+    {
+      "name": "Debug WS Backend (TS)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/apps/ws-backend/src/index.ts",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "cwd": "${workspaceFolder}/apps/ws-backend",
+      "runtimeExecutable": "/home/ash/.nvm/versions/node/v22.18.0/bin/node"
+    }
+  ]
+}
